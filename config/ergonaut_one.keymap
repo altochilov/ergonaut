@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 
 #define DEF 0
 #define LWR 1
@@ -10,9 +9,13 @@
 
 &lt { quick-tap-ms = <200>; };
 
-&mt { quick-tap-ms = <200>; };
+flavor = "
 
-/ {
+tap-preferred {
+    ";};
+
+/
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -27,10 +30,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W        &kp E        &kp R           &kp T        &kp Y                   &kp U              &kp I            &kp O        &kp P     &kp LBKT
-&kp TAB     &kp A  &mt LCTRL S  &mt LALT D   &mt LSHIFT F    &kp G        &kp H                   &mt RIGHT_SHIFT J  &mt RIGHT_ALT K  &mt RCTRL L  &kp SEMI  &kp APOSTROPHE
-&kp GRAVE   &kp Z  &kp X        &kp C        &kp V           &kp B        &kp N                   &kp M              &kp COMMA        &kp DOT      &kp FSLH  &kp RIGHT_BRACKET
-                                &lt RSE TAB  &kt LEFT_SHIFT  &lt LWR RET  &lt LWR LA(LEFT_SHIFT)  &mt RSHFT SPACE    &lt RSE DEL
+&kp ESCAPE  &kp Q  &kp W        &kp E              &kp R         &kp T        &kp Y                   &kp U              &kp I            &kp O        &kp P     &kp LBKT
+&kp TAB     &kp A  &mt LCTRL S  &mt LALT D         &mt LSHIFT F  &kp G        &kp H                   &mt RIGHT_SHIFT J  &mt RIGHT_ALT K  &mt RCTRL L  &kp SEMI  &kp APOSTROPHE
+&kp GRAVE   &kp Z  &kp X        &kp C              &kp V         &kp B        &kp N                   &kp M              &kp COMMA        &kp DOT      &kp FSLH  &kp RIGHT_BRACKET
+                                &lt RSE BACKSLASH  &kp SPACE     &lt LWR RET  &lt LWR LA(LEFT_SHIFT)  &kp BACKSPACE      &lt RSE DEL
             >;
         };
 
